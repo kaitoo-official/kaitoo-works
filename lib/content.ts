@@ -4,8 +4,8 @@
 export const SITE = {
   name: "KAITOO Works",
   tagline: "KAITOO Works｜AI・Web制作",
-  // TODO: Googleフォームを作成したら、そのURLに差し替える
-  contactUrl: "",
+  // お問い合わせ用Googleフォーム（KAITOO Works お問い合わせ）
+  contactUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdnTemnGDFOaY55Y1bhwRACX03RcrwSOVJ-UyXC-UDN3JR0mQ/viewform",
 };
 
 export type Service = {
