@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ブランドカラー：落ち着いた白地＋深い青。AIっぽいネオンやグラデーションは使わない */
+@theme {
+  --color-paper: #fafaf7;
+  --color-ink: #16181d;
+  --color-muted: #5b606b;
+  --color-line: #e4e3dc;
+  --color-accent: #1f4fd8;
+  --color-accent-soft: #e9eefc;
+  --font-sans: var(--font-inter), var(--font-noto), "Hiragino Sans", "Yu Gothic", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* FAQの開閉マーク */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-mark {
+  transform: rotate(45deg);
 }
