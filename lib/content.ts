@@ -136,16 +136,20 @@ export const works: Work[] = [
     link: { href: "https://www.youtube.com/@MixieJars", label: "YouTubeを見る" },
   },
   {
-    name: "The Gadgetman",
-    kind: "Instagramメディア",
-    images: [],
-    imageStyle: "cover",
+    name: "ガジェクマ（GADGEKUMA）",
+    kind: "Instagramメディア／リール・カルーセル",
+    images: [
+      { src: "/works/gadgekuma-mx.webp", alt: "ガジェクマのカルーセル投稿：Logicool MX ERGO S", w: 600, h: 600 },
+      { src: "/works/gadgekuma-nova.webp", alt: "ガジェクマのカルーセル投稿：CIO NovaWave 3Way", w: 600, h: 600 },
+      { src: "/works/gadgekuma-mx2.webp", alt: "ガジェクマのカルーセル投稿：MX ERGO S の2枚目", w: 600, h: 600 },
+    ],
+    imageStyle: "row",
     bg: "#16181d",
     problem: "スクロールされる一瞬で、ガジェットの魅力を伝えたい。",
-    made: "商品レビューのカルーセル投稿と、広告のように見せるクリエイティブを企画・制作しています。",
-    tech: ["カルーセル設計", "AI画像生成", "コピーライティング"],
+    made: "ブランド設計（ロゴ・配色・キャラクター）から、商品レビューのカルーセル投稿、実写素材を使ったリール動画の制作・自動編集の仕組みまでを担当しています。",
+    tech: ["ブランド設計", "カルーセル設計", "リール動画編集", "AI画像生成", "Python（動画の自動編集）"],
     result: "Instagramで運用中です。",
-    link: { href: "https://www.instagram.com/gadgetman_jp/", label: "Instagramを見る" },
+    link: { href: "https://www.instagram.com/gadgekuma/", label: "Instagramを見る" },
   },
 ];
 

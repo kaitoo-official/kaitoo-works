@@ -31,8 +31,8 @@ function WorkVisual({ work }: { work: Work }) {
   if (work.images.length === 0) {
     return (
       <div className={`${base} flex flex-col items-center justify-center text-white`} style={{ background: work.bg }}>
-        <p className="text-2xl font-bold tracking-tight">The Gadgetman</p>
-        <p className="mt-1 text-xs tracking-[0.2em] text-white/60">INSTAGRAM MEDIA</p>
+        <p className="text-2xl font-bold tracking-tight">{work.name}</p>
+        <p className="mt-1 text-xs tracking-[0.2em] text-white/60">{work.kind}</p>
       </div>
     );
   }
