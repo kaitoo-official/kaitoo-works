@@ -4,8 +4,9 @@
 export const SITE = {
   name: "KAITOO Works",
   tagline: "KAITOO Works｜AI・Web制作",
-  // お問い合わせ用Googleフォーム（KAITOO Works お問い合わせ）
-  contactUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdnTemnGDFOaY55Y1bhwRACX03RcrwSOVJ-UyXC-UDN3JR0mQ/viewform",
+  // お問い合わせ用Googleフォーム（KAITOO Works お問い合わせ）2026-10-26 差し替え
+  // 旧：https://docs.google.com/forms/d/e/1FAIpQLSdnTemnGDFOaY55Y1bhwRACX03RcrwSOVJ-UyXC-UDN3JR0mQ/viewform
+  contactUrl: "https://docs.google.com/forms/d/e/1FAIpQLScgahnfP6KKs0s66l60FS9vUIO712V1OIH7Y7oxzV3fY45oJg/viewform",
 };
 
 export type Service = {
