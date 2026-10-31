@@ -259,6 +259,16 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <figure className="mt-8 overflow-hidden rounded-2xl border border-ink/10 bg-white">
+              <Image
+                src="/works/before-after.webp"
+                alt="散らばった書類・メール・表を、1つの整った表とチェック済みの作業にまとめるイメージ図"
+                width={1200}
+                height={675}
+                sizes="(min-width: 1152px) 1088px, 100vw"
+                className="h-auto w-full"
+              />
+            </figure>
             <p className="mt-6 text-sm text-muted">1つの作業だけでも大丈夫です。今のやり方を聞いて、どこまで自動にできるかを整理します。</p>
           </div>
         </section>
