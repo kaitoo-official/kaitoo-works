@@ -34,3 +34,11 @@ details > summary::-webkit-details-marker {
 details[open] .faq-mark {
   transform: rotate(45deg);
 }
+
+/* キーボード操作でもフォーカスが見えるように */
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 0.75rem;
+}

@@ -3,11 +3,66 @@
 
 export const SITE = {
   name: "KAITOO Works",
-  tagline: "KAITOO Works｜AI・Web制作",
+  tagline: "KAITOO Works｜業務効率化・Web開発",
   // お問い合わせ用Googleフォーム（KAITOO Works お問い合わせ）2026-10-26 差し替え
   // 旧：https://docs.google.com/forms/d/e/1FAIpQLSdnTemnGDFOaY55Y1bhwRACX03RcrwSOVJ-UyXC-UDN3JR0mQ/viewform
   contactUrl: "https://docs.google.com/forms/d/e/1FAIpQLScgahnfP6KKs0s66l60FS9vUIO712V1OIH7Y7oxzV3fY45oJg/viewform",
+  // ボタンの文言はヘッダー・ファーストビュー・問い合わせ・スマホ固定ボタンで共通
+  contactLabel: "今の作業を相談する",
 };
+
+// ファーストビュー（2026-11-01 改修：業務効率化・小規模開発を主役に）
+export const hero = {
+  eyebrow: "業務効率化 / 小規模Web開発 / AI活用",
+  title: ["手作業を減らす。", "必要な仕組みを、", "小さく速くつくる。"],
+  lead: "GAS・スプレッドシート・Python・Next.jsを使い、転記や集計などの定型業務の自動化から、小さなWebツールの開発・修正まで対応します。営業・業務の現場経験をもとに、困りごとの整理から一緒に進めます。",
+  stack: ["GAS", "Google Sheets", "Python", "Next.js", "AI連携"],
+  // 事実だけを書く（Pocket Base の App Store 公開は 2026-10-24）
+  trust: ["自主開発アプリを App Store で公開", "前職でGASによる業務改善", "フルリモート対応"],
+};
+
+// 「こんな作業、ありませんか？」
+export const pains = [
+  { icon: "copy", title: "毎日のコピペ・転記を減らしたい", body: "メールやフォームの内容を、毎回手でシートに書き写している。" },
+  { icon: "table", title: "Excel・CSVの集計を自動にしたい", body: "月末に同じ手順で、データを集めて並べ替えて集計している。" },
+  { icon: "spark", title: "AIで分類・要約・下書きをしたい", body: "問い合わせの振り分けや返信の下書きを、AIで速くしたい。" },
+  { icon: "code", title: "小さなWebツールや修正を頼みたい", body: "社内用の小さなツールや、今のサイト・アプリの一部を直したい。" },
+] as const;
+
+// 「できること」（価格は出さず、何を頼めるかだけ）
+export const capabilities = [
+  {
+    no: "01",
+    title: "業務効率化・自動化",
+    pain: "転記・集計・メール作成など、毎月くり返す作業に時間を取られている。",
+    can: "スプレッドシートやExcel・CSVの処理をツールにして自動化。必要に応じてAIで分類・要約・下書きを組み込みます。",
+    tech: ["GAS", "Google Sheets", "Python", "Excel / CSV", "ChatGPT・Claude連携"],
+    main: true,
+  },
+  {
+    no: "02",
+    title: "小規模Web・アプリ開発",
+    pain: "社内用の小さなツールがほしい。今のサイトやアプリの一部だけ直したい。",
+    can: "小さなWebアプリ・管理画面・API連携の開発や、既存サイトの修正に対応します。",
+    tech: ["Next.js", "TypeScript", "Firebase", "API", "Vercel"],
+    main: false,
+  },
+  {
+    no: "03",
+    title: "LP・SNS制作",
+    pain: "サービス紹介のページや、Instagramの投稿を手早くそろえたい。",
+    can: "スマホ優先の1ページサイト（最短48時間で初稿）と、Instagramの投稿画像・カルーセル・投稿文を制作します。",
+    tech: ["LP制作", "Instagram投稿", "AI画像", "英語投稿"],
+    main: false,
+  },
+];
+
+// 「できる根拠」（お客様の声の代わり。事実だけ）
+export const reasons = [
+  { title: "業務の現場を知っている", body: "前職で法人営業・新規事業・業務改善を担当。GASでの自動化やGemini活用、営業フローの改善を自分で進めてきました。" },
+  { title: "公開まで自分で開発", body: "自主開発のアプリを、Webで公開し、iOSアプリとしてApp Storeでも公開しました（2026年10月）。" },
+  { title: "AIで速く、人が確認", body: "開発にはClaude Codeなどを使い、速く作ります。要件の整理・動作確認・テストは自分で行います。" },
+];
 
 export type Service = {
   id: string;
@@ -22,17 +77,17 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    id: "sns",
-    label: "SNS",
-    title: "AI × SNS制作",
-    lead: "Instagramの投稿画像・カルーセル・投稿文をまとめて制作。更新が止まっているアカウントを、すぐ動かせる状態にします。",
-    from: "9,800",
-    lt: "3日〜",
-    items: ["投稿画像・カルーセル", "投稿文・ハッシュタグ", "トンマナ設計・テンプレート", "英語投稿にも対応"],
+    id: "automation",
+    label: "効率化",
+    title: "AI業務効率化",
+    lead: "Excel・CSVの集計や定型の文章作成など、毎月くり返す作業をツールにして自動化。必要に応じてAIを組み込みます。",
+    from: "19,800",
+    lt: "5日〜",
+    items: ["Excel / CSV / スプレッドシート処理", "Python・GASでの自動化", "ChatGPT・Claude連携ツール", "FAQチャットボット・小さなWebアプリ"],
     plans: [
-      { name: "ライト", price: "9,800", detail: "投稿画像3枚＋投稿文3本", lt: "3日" },
-      { name: "スタンダード", price: "19,800", detail: "カルーセル1本（最大8枚）＋投稿画像3枚＋投稿文4本", lt: "5日" },
-      { name: "プレミアム", price: "39,800", detail: "投稿10本分＋トンマナ設計＋編集できるテンプレート", lt: "7日" },
+      { name: "ライト", price: "19,800", detail: "Excel・CSV・スプレッドシートの自動化ツール1つ", lt: "5日" },
+      { name: "スタンダード", price: "39,800", detail: "AI連携を含むツール1つ（分類・要約・返信の下書きなど）", lt: "7日" },
+      { name: "プレミアム", price: "69,800", detail: "小規模なWebアプリ、またはチャットボット", lt: "14日" },
     ],
   },
   {
@@ -50,17 +105,17 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "automation",
-    label: "効率化",
-    title: "AI業務効率化",
-    lead: "Excel・CSVの集計や定型の文章作成など、毎月くり返す作業をツールにして自動化。必要に応じてAIを組み込みます。",
-    from: "19,800",
-    lt: "5日〜",
-    items: ["Excel / CSV / スプレッドシート処理", "Python・GASでの自動化", "ChatGPT・Claude連携ツール", "FAQチャットボット・小さなWebアプリ"],
+    id: "sns",
+    label: "SNS",
+    title: "AI × SNS制作",
+    lead: "Instagramの投稿画像・カルーセル・投稿文をまとめて制作。更新が止まっているアカウントを、すぐ動かせる状態にします。",
+    from: "9,800",
+    lt: "3日〜",
+    items: ["投稿画像・カルーセル", "投稿文・ハッシュタグ", "トンマナ設計・テンプレート", "英語投稿にも対応"],
     plans: [
-      { name: "ライト", price: "19,800", detail: "Excel・CSV・スプレッドシートの自動化ツール1つ", lt: "5日" },
-      { name: "スタンダード", price: "39,800", detail: "AI連携を含むツール1つ（分類・要約・返信の下書きなど）", lt: "7日" },
-      { name: "プレミアム", price: "69,800", detail: "小規模なWebアプリ、またはチャットボット", lt: "14日" },
+      { name: "ライト", price: "9,800", detail: "投稿画像3枚＋投稿文3本", lt: "3日" },
+      { name: "スタンダード", price: "19,800", detail: "カルーセル1本（最大8枚）＋投稿画像3枚＋投稿文4本", lt: "5日" },
+      { name: "プレミアム", price: "39,800", detail: "投稿10本分＋トンマナ設計＋編集できるテンプレート", lt: "7日" },
     ],
   },
 ];
@@ -69,28 +124,34 @@ export type Work = {
   name: string;
   kind: string;
   images: { src: string; alt: string; w: number; h: number }[];
-  imageStyle: "contain" | "cover" | "row";
+  imageStyle: "contain" | "cover" | "row" | "phones";
   bg: string;
   problem: string;
   made: string;
   tech: string[];
   result: string;
   link?: { href: string; label: string };
+  // featured：大きく見せる主役の事例／more：「その他の自主制作」に折りたたむ
+  featured?: boolean;
+  more?: boolean;
 };
 
 export const works: Work[] = [
   {
     name: "Pocket Base",
     kind: "Webアプリ／iOS・Androidアプリ",
+    // スクショは App Store 提出用の iPhone 実機画面（2026-10-02 撮影・個人情報なし）
     images: [
-      { src: "/works/pocketbase-cover.webp", alt: "Pocket Base のロゴ画像", w: 1024, h: 500 },
+      { src: "/works/pocketbase-home.webp", alt: "Pocket Base のホーム画面（検索窓）", w: 520, h: 1125 },
+      { src: "/works/pocketbase-list.webp", alt: "Pocket Base のカード一覧と絞り込み", w: 520, h: 1125 },
     ],
-    imageStyle: "contain",
+    imageStyle: "phones",
     bg: "#0e1a3a",
     problem: "3,800枚以上あるカードの中から、目的のカードをすばやく探せる日本語のサービスがほしい。",
-    made: "カード名・技名・効果で探せる検索、絞り込み、日英切り替えを備えたWebアプリを企画から一人で開発。iOS・Androidアプリ化も行いました。",
+    made: "カード名・技名・効果で探せる検索、絞り込み、日英切り替えを備えたWebアプリを企画から一人で開発。Capacitorでスマホアプリにして、App Storeの審査対応まで自分で行いました。",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase", "Capacitor", "Vercel"],
-    result: "Web版を公開中。iOS・Androidアプリはテスト配信の段階です。（ポケポケ非公式の個人開発サービス）",
+    result: "Web版を公開中。iOSアプリは2026年10月にApp Storeで公開、Androidはテスト配信中です。（ポケポケ非公式の個人開発サービス）",
+    featured: true,
     link: { href: "https://pocket-base-delta.vercel.app/", label: "サイトを見る" },
   },
   {
@@ -109,6 +170,7 @@ export const works: Work[] = [
   },
   {
     name: "Office Raccoon",
+    more: true,
     kind: "LINEスタンプ／多言語展開",
     images: [
       { src: "/works/raccoon-jp-01.webp", alt: "Office Raccoon 日本語版スタンプ", w: 320, h: 280 },
@@ -124,6 +186,7 @@ export const works: Work[] = [
   },
   {
     name: "Mixie Jars",
+    more: true,
     kind: "キャラクター設計／YouTube・Instagram",
     images: [
       { src: "/works/mixie-scenes.webp", alt: "Mixie Jars の赤・黄・青の絵の具ビンのキャラクター", w: 800, h: 500 },
@@ -163,6 +226,10 @@ export const flow = [
 ];
 
 export const faqs = [
+  {
+    q: "小さな修正・自動化だけでも頼めますか？",
+    a: "はい。1つの転記作業や、サイトの小さな修正からでもご相談いただけます。何を作るか決まっていなくても大丈夫です。",
+  },
   {
     q: "AIで作ったものは品質が心配です。",
     a: "AIは下書きやバリエーション出しに使い、仕上げは必ず人の目で確認・調整します。速さと品質の両方を大切にしています。",

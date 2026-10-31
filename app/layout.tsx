@@ -14,12 +14,12 @@ const notoSansJp = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "KAITOO Works｜AI・Web制作",
+  title: "KAITOO Works｜業務効率化・Web開発",
   description:
-    "KAITOO Worksは、AIを活用してInstagram投稿制作・48時間ミニLP制作・業務効率化ツール制作を短納期で行う個人の制作サービスです。",
+    "KAITOO Worksは、GAS・スプレッドシート・Python・Next.jsで、転記や集計などの定型業務の自動化から小さなWebツールの開発・修正まで行う個人の開発サービスです。LP・SNS制作にも対応します。",
   openGraph: {
-    title: "KAITOO Works｜AI・Web制作",
-    description: "SNS制作 9,800円〜／48時間ミニLP 29,800円〜／AI業務効率化 19,800円〜",
+    title: "KAITOO Works｜業務効率化・Web開発",
+    description: "AI業務効率化 19,800円〜／小規模Web・アプリ開発／48時間ミニLP 29,800円〜／SNS制作 9,800円〜",
     locale: "ja_JP",
     type: "website",
   },
